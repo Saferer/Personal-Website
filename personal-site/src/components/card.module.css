@@ -1,0 +1,14 @@
+.card {
+  color: #f0fbff;
+  background-color: #7df9c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  padding: 50px;
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+}
