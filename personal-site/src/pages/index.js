@@ -15,10 +15,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <PageContainer>
-        <Container
-          fluid
-          style={{ padding: 0, height: "100%", marginTop: "20px" }}
-        >
+        <Container fluid style={{ padding: 0, marginTop: "20px" }}>
           <Row className="justify-content-center">
             <Col md="10">
               <img src={Blu} className="profile" />
