@@ -5,8 +5,7 @@ body {
   background-size: cover;
   background-color: #333333;
   color: #ffffff;
-  font-family: Georgia, "Times New Roman", Times, serif "Open Sans", Helvetica,
-    Arial, sans-serif;
+  font-family: "Open Sans", monospace;
   font-weight: 300;
   overflow-x: hidden;
   min-width: 100vw;
