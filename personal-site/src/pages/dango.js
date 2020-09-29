@@ -6,7 +6,7 @@ export default class About extends React.Component {
   render() {
     return (
       <PageContainer>
-        <DangoCanvas width={600} height={1000}></DangoCanvas>
+        <DangoCanvas></DangoCanvas>
       </PageContainer>
     )
   }

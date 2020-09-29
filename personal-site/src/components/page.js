@@ -27,9 +27,9 @@ export default function PageContainer({ children }) {
             <Nav.Link href="/" className="navlink-global">
               Saferer
             </Nav.Link>
-            {/* <Nav.Link href="/about" className="navlink-global">
-            About
-          </Nav.Link> */}
+            <Nav.Link href="/dango" className="navlink-global">
+              Dango
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

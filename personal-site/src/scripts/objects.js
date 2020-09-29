@@ -1,3 +1,5 @@
+import Blu from "../img/Blu.png"
+
 export class GameObject {
   constructor(ctx, x, y) {
     this.context = ctx
@@ -46,13 +48,22 @@ export class Circle extends RigidBody {
   constructor(ctx, x, y, vx, vy, r = 25) {
     super(ctx, x, y, vx, vy)
     this.radius = r
+    this.sprite = new Image()
+    this.sprite.src = Blu
   }
 
   draw = () => {
-    this.context.beginPath()
-    this.context.fillStyle = this.isColliding ? "#ff8000" : "#0099b0"
-    this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI)
-    this.context.fill()
+    this.context.drawImage(
+      this.sprite,
+      this.x - this.radius * 2,
+      this.y - this.radius * 2,
+      this.radius * 4,
+      this.radius * 4
+    )
+    // this.context.beginPath()
+    // this.context.fillStyle = this.isColliding ? "#ff8000" : "#0099b0"
+    // this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI)
+    // this.context.fill()
   }
 
   update = secondsPassed => {

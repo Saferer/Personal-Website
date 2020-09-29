@@ -8,13 +8,14 @@ class DangoCanvas extends React.Component {
     this.canvasRef = React.createRef()
     this.oldTime = 0
     this.gameObjects = []
-    this.width = props.width
-    this.height = props.height
+    this.width = 1920
+    this.height = 1080
   }
 
   drawBackground = ctx => {
-    ctx.fillStyle = "#000000" //"#54b9e8"
-    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+    ctx.clearRect(0, 0, this.width, this.height)
+    // ctx.fillStyle = "#54b9e8"
+    // ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
   }
 
   draw = ctx => {
@@ -98,7 +99,7 @@ class DangoCanvas extends React.Component {
   }
 
   createWorld = context => {
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 100; i++) {
       this.gameObjects.push(
         new Circle(
           context,
@@ -139,21 +140,11 @@ class DangoCanvas extends React.Component {
     }
   }
 
-  componentDidUpdate = () => {}
-
-  render() {
+  render = () => {
     return (
-      <div>
-        <Container>
-          <Row className="justify-content-center">
-            <canvas
-              ref={this.canvasRef}
-              width={this.width}
-              height={this.height}
-            />
-          </Row>
-        </Container>
-      </div>
+      <Row className="justify-content-center">
+        <canvas ref={this.canvasRef} width={this.width} height={this.height} />
+      </Row>
     )
   }
 }
