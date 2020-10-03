@@ -8,8 +8,10 @@ class DangoCanvas extends React.Component {
     this.canvasRef = React.createRef()
     this.oldTime = 0
     this.gameObjects = []
-    this.width = 1920
-    this.height = 1080
+    if (typeof window !== "undefined") {
+      this.width = window.innerWidth
+      this.height = window.innerHeight
+    }
   }
 
   drawBackground = ctx => {
@@ -141,9 +143,15 @@ class DangoCanvas extends React.Component {
   }
 
   render = () => {
+    if (typeof window === "undefined") return <></>
     return (
       <Row className="justify-content-center">
-        <canvas ref={this.canvasRef} width={this.width} height={this.height} />
+        <canvas
+          style={{ height: "90vh", width: "100wh" }}
+          ref={this.canvasRef}
+          width={this.width}
+          height={this.height}
+        />
       </Row>
     )
   }
